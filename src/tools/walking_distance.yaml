@@ -1,0 +1,71 @@
+identity:
+  name: walking_distance
+  author: vladimirsachkov
+  label:
+    en_US: Walking Distance Calculator
+    zh_Hans: 步行距离计算器
+description:
+  human:
+    en_US: Calculate the walking distance and time between two sets of coordinates.
+    zh_Hans: 计算两组坐标之间的步行距离和时间。
+  llm: Calculate the walking distance and time between two sets of coordinates.
+parameters:
+  - name: from_lat
+    type: number
+    required: true
+    label:
+      en_US: From Latitude
+      zh_Hans: 起点纬度
+    human_description:
+      en_US: Latitude of the starting point.
+      zh_Hans: 起点的纬度。
+    llm_description: Latitude of the starting point.
+    form: llm
+  - name: from_lon
+    type: number
+    required: true
+    label:
+      en_US: From Longitude
+      zh_Hans: 起点经度
+    human_description:
+      en_US: Longitude of the starting point.
+      zh_Hans: 起点的经度。
+    llm_description: Longitude of the starting point.
+    form: llm
+  - name: to_lat
+    type: number
+    required: true
+    label:
+      en_US: To Latitude
+      zh_Hans: 终点纬度
+    human_description:
+      en_US: Latitude of the destination.
+      zh_Hans: 终点的纬度。
+    llm_description: Latitude of the destination.
+    form: llm
+  - name: to_lon
+    type: number
+    required: true
+    label:
+      en_US: To Longitude
+      zh_Hans: 终点经度
+    human_description:
+      en_US: Longitude of the destination.
+      zh_Hans: 终点的经度。
+    llm_description: Longitude of the destination.
+    form: llm
+  - name: walking_speed
+    type: number
+    required: false
+    default: 5.0
+    label:
+      en_US: Walking Speed (km/h)
+      zh_Hans: 步行速度 (km/h)
+    human_description:
+      en_US: Average walking speed in km/h (default is 5.0 km/h).
+      zh_Hans: 平均步行速度（公里/小时，默认为 5.0）。
+    llm_description: Average walking speed in km/h (default is 5.0 km/h).
+    form: llm
+extra:
+  python:
+    source: tools/walking_distance.py

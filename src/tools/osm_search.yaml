@@ -1,0 +1,111 @@
+identity:
+  name: osm_search
+  author: vladimirsachkov
+  label:
+    en_US: OSM Search
+description:
+  human:
+    en_US: Search for amenities (groceries, parks, schools, transit, healthcare, fitness) within a specified radius of a latitude and longitude.
+  llm: Search for amenities near a lat/long coordinate.
+parameters:
+  - name: latitude
+    type: number
+    required: true
+    label:
+      en_US: Latitude
+    human_description:
+      en_US: The latitude of the location.
+    llm_description: The latitude of the location.
+    form: llm
+  - name: longitude
+    type: number
+    required: true
+    label:
+      en_US: Longitude
+    human_description:
+      en_US: The longitude of the location.
+    llm_description: The longitude of the location.
+    form: llm
+  - name: radius
+    type: number
+    required: true
+    label:
+      en_US: Radius (km)
+    human_description:
+      en_US: The search radius in kilometers.
+    llm_description: The search radius in kilometers.
+    form: llm
+  - name: categories
+    type: select
+    required: true
+    label:
+      en_US: Categories
+    options:
+      - value: groceries
+        label:
+          en_US: Groceries
+      - value: parks
+        label:
+          en_US: Parks
+      - value: schools
+        label:
+          en_US: Schools
+      - value: transit
+        label:
+          en_US: Transit
+      - value: healthcare
+        label:
+          en_US: Healthcare
+      - value: fitness
+        label:
+          en_US: Fitness
+      - value: all
+        label:
+          en_US: All
+    human_description:
+      en_US: The category of amenities to search for.
+    llm_description: The category of amenities to search for.
+    form: llm
+output_schema:
+  type: object
+  properties:
+    count:
+      type: number
+      description: The number of amenities found.
+    results:
+      type: array
+      items:
+        type: object
+        properties:
+          name:
+            type: string
+          type:
+            type: string
+          lat:
+            type: number
+          lon:
+            type: number
+          address:
+            type: string
+          description:
+            type: string
+    data:
+      type: array
+      items:
+        type: object
+        properties:
+          name:
+            type: string
+          type:
+            type: string
+          lat:
+            type: number
+          lon:
+            type: number
+          address:
+            type: string
+          description:
+            type: string
+extra:
+  python:
+    source: tools/osm_search.py
