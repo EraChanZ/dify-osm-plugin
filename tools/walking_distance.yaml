@@ -1,9 +1,10 @@
 identity:
   name: walking_distance
-  author: vladimirsachkov
+  author: EraChanZ
   label:
     en_US: Walking Distance Calculator
-    zh_Hans: 步行距离计算器
+    zh_Hans: Walking Distance Calculator
+  icon: icon.svg
 description:
   human:
     en_US: Calculate the walking distance and time between two sets of coordinates.

@@ -1,8 +1,9 @@
 identity:
   name: osm_search
-  author: vladimirsachkov
+  author: EraChanZ
   label:
     en_US: OSM Search
+  icon: icon.svg
 description:
   human:
     en_US: Search for amenities (groceries, parks, schools, transit, healthcare, fitness) within a specified radius of a latitude and longitude.
