@@ -1,5 +1,5 @@
 identity:
-  author: vladimirsachkov
+  author: EraChanZ
   name: openstreetmap
   label:
     en_US: OpenStreetMap
@@ -15,7 +15,3 @@ credentials_for_provider: {}
 tools:
   - tools/osm_search.yaml
   - tools/walking_distance.yaml
-
-extra:
-  python:
-    source: provider/openstreetmap.py
