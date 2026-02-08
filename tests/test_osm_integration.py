@@ -6,7 +6,7 @@ try:
 except ImportError:
     pass
 
-from src.tools.osm_search import OSMSearchTool
+from tools.osm_search import OSMSearchTool
 from unittest.mock import MagicMock
 import json
 

@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch, MagicMock
-from src.tools.osm_search import OSMSearchTool
+from tools.osm_search import OSMSearchTool
 
 class TestOSMSearchTool(unittest.TestCase):
     def setUp(self):
